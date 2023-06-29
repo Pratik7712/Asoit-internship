@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Calculator</title>
+<script type="text/javascript">
+function calc(value) {
+    document.getElementById("result").value += value;
+    
+}
+function clearResult() {
+    document.getElementById("result").value = "";
+}
+function calculate() {
+    var expression = document.getElementById("result").value;
+    var result = eval(expression);
+    document.getElementById("result").value = result;
+}
+
+</script>
+<style>
+    
+    table{
+        background-color: rgb(226, 142, 108);
+        border: 5px solid black ;
+        height: 650px;
+        width: 40%;
+
+    }
+
+    input{
+        font-size: 50px;
+
+    }
+
+    button{
+        height: 100px;
+        width: 200px;
+    }
+
+    #result{
+        height: 100px;
+        width: 610px;
+    }
+</style>
+</head>
+<body>
+    <center>
+        
+    <table>
+        
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><button onclick="clearResult()">C</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="calc('1')">1</button></td>
+            <td><button onclick="calc('2')">2</button></td>
+            <td><button onclick="calc('3')">3</button></td>
+            <td><button onclick="calc('+')">+</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="calc('4')">4</button></td>
+            <td><button onclick="calc('5')">5</button></td>
+            <td><button onclick="calc('6')">6</button></td>
+            <td><button onclick="calc('-')">-</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="calc('7')">7</button></td>
+            <td><button onclick="calc('8')">8</button></td>
+            <td><button onclick="calc('9')">9</button></td>
+            <td><button onclick="calc('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="calc('0')">0</button></td>
+            <td><button onclick="calc('.')">.</button></td>
+            
+            <td><button onclick="calc('/')">/</button></td>
+            <td colspan="4"><button onclick="calculate()">=</button></td>
+        </tr>
+
+    </table>
+    </center>
+</body>
+</html>
