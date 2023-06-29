@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Date</title>
+    
+    
+
+</head>
+<body>
+    <h3>CLick The button to show date .....!</h3>
+    <button id="show">click here</button>
+    <p id="date"></p>
+
+    <h3>CLick The button to show your name length</h3>
+    <label for="name">Enter your name :- </label>
+    <input type="text" id="name" >
+    <button id="length">click here</button>
+    <p id="showl"></p>
+
+    <script>
+        document.getElementById("show").addEventListener("click",displaydate);
+        function displaydate()
+        {
+            document.getElementById("date").innerHTML=Date();
+        }
+    </script>
+    <script type="text/javascript" src="./my_js.js"></script>
+</body>
+</html>
